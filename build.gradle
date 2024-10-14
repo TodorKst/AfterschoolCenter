@@ -38,3 +38,7 @@ jar {
         )
     }
 }
+
+bootJar {
+    mainClass = 'com.example.website.WebsiteApplication'
+}
