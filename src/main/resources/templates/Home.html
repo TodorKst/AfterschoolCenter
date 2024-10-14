@@ -21,7 +21,7 @@
         .program-card {
             background-color: #fff;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 12px 20px 20px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
@@ -36,7 +36,7 @@
 
         .program-card:hover {
             transform: scale(1.05);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 12px 20px 20px rgba(0, 0, 0, 0.1);
         }
 
         .navbar-brand, .navbar-nav .nav-link {
@@ -119,10 +119,26 @@
 </section>
 
 <!-- Programs Section -->
+<!-- Programs Section -->
 <section id="programs" class="py-5 bg-light">
     <div class="container">
         <h2 class="text-center mb-4">Образователни възможности</h2>
-        <p class="text-center mb-4">Предлагаме програми за деца от 1 до 7 клас, включително:</p>
+
+        <!-- Main Card -->
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-8 d-flex justify-content-center">
+                <div class="program-card" style="background-color: #f8f9fa;">
+                    <div class="p-3">
+                        <h4>Основна Програма:</h4>
+                        <p>В "Светът на знанието" предлагаме занимания за ученици от първи до седми клас през събота и
+                            неделя, които съчетават обучение и забавление. Нашите програми са специално проектирани да
+                            стимулират любопитството и да развиват уменията на децата в приятна и вдъхновяваща
+                            среда.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="row justify-content-center">
             <div class="col-md-4 d-flex justify-content-center">
                 <div class="program-card">
@@ -189,6 +205,7 @@
         </div>
     </div>
 </section>
+
 
 <!-- Contact Section -->
 <section id="contact" class="py-5">
