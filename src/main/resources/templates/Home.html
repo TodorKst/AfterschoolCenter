@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="bg">
+<html lang="bg" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,6 +31,17 @@
         .nav-link:hover {
             background-color: #2b7976; /* Darker shade of blue on hover */
             color: white; /* Change text color on hover */
+        }
+
+        .btn:hover {
+            background-color: #2b7976; /* Darker shade of blue on hover */
+            color: white; /* Change text color on hover */
+        }
+
+        .btn {
+            background: #17252A;
+            border: #17252A;
+            color: white
         }
         /* Navbar Styling */
         .navbar {
@@ -258,11 +269,37 @@
 </section>
 
 <!-- Contact Section -->
+<!--<section id="contact" class="py-5">-->
+<!--    <div class="container text-center">-->
+<!--        <h2 class="mb-4">Връзка с нас</h2>-->
+<!--        <p>Имейл: example@example.com</p>-->
+<!--        <p>Телефон: +359 888888888</p>-->
+<!--    </div>-->
+<!--</section>-->
+
 <section id="contact" class="py-5">
     <div class="container text-center">
         <h2 class="mb-4">Връзка с нас</h2>
-        <p>Имейл: example@example.com</p>
-        <p>Телефон: +359 888888888</p>
+        <p>Искате да запишете вашето дете или имате въпроси? Свържете се с нас!</p>
+        <form class="text-start mx-auto" style="max-width: 600px;" action="" method="post" th:object="${emailDto}">
+            <div class="mb-3">
+                <label for="name" class="form-label">Име</label>
+                <input th:field="*{name}" type="text" class="form-control" id="name" placeholder="Вашето име" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Имейл</label>
+                <input th:field="*{email}" type="email" class="form-control" id="email" placeholder="Вашият имейл" required>
+            </div>
+            <div class="mb-3">
+                <label for="subject" class="form-label">Относно</label>
+                <input th:field="*{subject}" type="text" class="form-control" id="subject" placeholder="Относно" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Съобщение</label>
+                <textarea th:field="*{message}" class="form-control" id="message" rows="4" placeholder="Вашето съобщение" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Изпрати</button>
+        </form>
     </div>
 </section>
 
